@@ -92,7 +92,7 @@ jobs:
           run: | 
                sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/product-catalog:${{github.run_id}}|" kubernetes/productcatalog/deploy.yaml
         
-        - name: Commit and push changes
+        - name: Commit and push changes to main
           run: |
             git config --global user.email "abhishek@gmail.com"
             git config --global user.name "Abhishek Veeramalla"
